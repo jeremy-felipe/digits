@@ -4,7 +4,7 @@ import { Contacts } from '../../api/contacts/contacts.js';
 Template.Home_Page.helpers({
 
   /**
-   * @returns {*} All of the Stuff documents.
+   * @returns {*} All of the Contact documents.
    */
   contactList() {
     return Contacts.find();
