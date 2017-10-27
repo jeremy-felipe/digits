@@ -1,30 +1,33 @@
+
+
 <template name="Home_Page">
+
   <div class="ui container">
 
     {{#if Template.subscriptionsReady}}
-    <table style="margin-top: 20px" class="ui celled table">
+    <table style="margin-top: 20px" class="ui sortable celled table">
       <thead>
-      <tr>
-        <th>First</th>
-        <th>Last</th>
-        <th>Address</th>
-        <th>Phone</th>
-        <th>Email</th>
-        <th>Edit</th>
-      </tr>
+        <tr>
+          <th>First</th>
+          <th>Last</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Edit</th>
+        </tr>
       </thead>
 
       <tbody>
-      {{#each contact in contactList}}
-      <tr>
-        <td>{{contact.first}}</td>
-        <td>{{contact.last}}</td>
-        <td>{{contact.address}}</td>
-        <td>{{contact.telephone}}</td>
-        <td>{{contact.email}}</td>
-        <td><a href="{{pathFor 'Edit_Contact_Page' _id=contact._id}}">Edit</a></td>
-      </tr>
-      {{/each}}
+        {{#each contact in contactList}}
+          <tr>
+            <td>{{contact.first}}</td>
+            <td>{{contact.last}}</td>
+            <td>{{contact.address}}</td>
+            <td>{{contact.telephone}}</td>
+            <td>{{contact.email}}</td>
+            <td><a href="{{pathFor 'Edit_Contact_Page' _id=contact._id}}">Edit</a></td>
+          </tr>
+        {{/each}}
       </tbody>
     </table>
     {{else}}
@@ -33,5 +36,6 @@
 
 
   </div>
+
 </template>
 
